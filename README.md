@@ -1,113 +1,127 @@
-# Challa Hemasri – Portfolio Website
+Challa Hemasri Portfolio Website
+Overview
 
-A modern responsive developer portfolio website built using React, Tailwind CSS, HTML5, CSS3, and JavaScript.
+This is a personal portfolio website developed to showcase academic achievements, technical skills, certifications, internships, and major projects in the domains of:
 
-## Live Website
+Data Science
+Machine Learning
+Quantum Computing
+Data Analytics
+ServiceNow Development
+Full Stack Development
 
-https://hema8102.github.io/portfolio/
+The portfolio is designed using HTML and CSS with a modern responsive user interface suitable for desktop and mobile devices.
 
----
+Features
+Responsive modern UI design
+Professional hero section
+About Me section
+Technical Skills section
+Interactive Projects section
+Tableau Dashboard Integration
+GitHub Project Links
+Certifications showcase
+Contact and social profile integration
+Mobile-friendly navigation
+Technologies Used
+HTML5
+CSS3
+JavaScript
+Tableau Public
+GitHub Pages
+Major Projects Included
+1. Hybrid Quantum-Enhanced Deep Learning for Diabetic Retinopathy Detection
 
-# Features
+Developed a hybrid AI model using:
 
-- Responsive modern UI
-- Mobile-friendly design
-- Interactive project cards
-- GitHub repository integration
-- Certificate redirection support
-- Professional recruiter-focused layout
-- Responsive certification section
-- Responsive contact section
-- Tailwind CSS styling
-- React component architecture
-- Smooth hover animations
-- Resume download support
-- External profile integrations
+Python
+TensorFlow/Keras
+CNN Architectures
+Quantum Machine Learning
 
----
+The system assists in retinal image classification and diabetic retinopathy detection.
 
-# Technologies Used
+2. EV Charge & Range Analytics Dashboard
 
-## Frontend
+Interactive Tableau dashboard for:
 
-- HTML5
-- CSS3
-- JavaScript
-- React.js
-- Tailwind CSS
+Electric vehicle analytics
+Battery charge monitoring
+Vehicle range analysis
+Energy efficiency visualization
+Comparative dashboard insights
 
-## Hosting & Deployment
+Built using Tableau Public and data visualization techniques.
 
-- GitHub
-- GitHub Pages
+3. Family Income & Expense Tracker
 
----
+ServiceNow-based application developed for:
 
-# Contact Information
+Family financial management
+Expense tracking
+Income monitoring
+Workflow automation
+Report generation
+4. Asset Management Portal
 
-- GitHub: https://github.com/hema8102
-- LinkedIn: https://www.linkedin.com/in/challa-hemasri-8b8043316
-- HackerRank: https://www.hackerrank.com/profile/ch_hemasri810
-- LeetCode: https://leetcode.com/u/PqpFvdKDRE/
-- Email: ch.hemasri810@gmail.com
-- Phone: +91 8106633848
-- Location: Vijayawada, Andhra Pradesh, India
+Developed an enterprise asset management system using ServiceNow for:
 
----
+Asset lifecycle management
+Inventory operations
+Workflow automation
+IT asset tracking
+Service operations
+Certifications
+HarvardX CS109x – Introduction to Data Science with Python
+NPTEL – Human Computer Interfaces
+Data Analytics with Tableau Internship
+Java Full Stack Development – Wipro TalentNext
+ServiceNow Administration Internship
+Customer Service Job Simulation – Forage
+Django Workshop – Pragmatiq
+Portfolio Sections
+Home
+About
+Skills
+Projects
+Certifications
+Contact
+Contact Information
+Email: ch.hemasri810@gmail.com
+GitHub: hema8102 GitHub
+LinkedIn: Challa Hemasri LinkedIn
+HackerRank: HackerRank Profile
+LeetCode: LeetCode Profile
+Deployment
 
-# Projects Included
+This portfolio can be deployed using:
 
-## 1. Hybrid Quantum-Enhanced Deep Learning for Diabetic Retinopathy Detection
-
-- Hybrid AI + Quantum ML model
-- TensorFlow/Keras based implementation
-- CNN architecture for retinal image analysis
-
-## 2. EV Charge & Range Analytics Dashboard
-
-- Tableau dashboard
-- EV charging and efficiency analytics
-- Data visualization project
-
-## 3. Family Income & Expense Tracker
-
-- ServiceNow application
-- Expense and income management
-- Workflow automation
-
----
-
-# Certifications Included
-
-- HarvardX CS109x – Introduction to Data Science with Python
-- NPTEL – Design & Implementation of Human-Computer Interfaces
-- Data Analytics with Tableau Internship
-- Java Full Stack Development – Wipro TalentNext
-- ServiceNow Administration Internship
-- Customer Service Job Simulation – Forage
-- Django Workshop – Pragmatiq
-
----
-
-# Folder Structure
-
-```text
+GitHub Pages
+Netlify
+Vercel
+GitHub Pages Deployment
+Upload project files to GitHub repository
+Open repository Settings
+Navigate to Pages
+Select:
+Branch: main
+Folder: /root
+Save changes
+GitHub generates a live portfolio URL
+Repository Structure
 portfolio/
 │
 ├── index.html
-│
-├── certificates/
-│   ├── harvardx-datascience-python.pdf
-│   ├── nptel-hci.pdf
-│   ├── tableau-data-analytics.pdf
-│   ├── java-fullstack-wipro.pdf
-│   ├── servicenow-administration.pdf
-│   ├── customer-service-forage.pdf
-│   └── django-workshop-pragmatiq.pdf
-│
 ├── images/
-│   ├── retinopathy-project.png
-│   ├── ev-dashboard.png
-│   └── expense-tracker.png
-│
-└── README.md
+├── certificates/
+├── README.md
+└── assets/
+Author
+
+Challa Hemasri
+Computer Science Engineering Student
+Seshadri Rao Gudlavalleru Engineering College (JNTUK)
+
+License
+
+This project is created for educational and professional portfolio purposes.
