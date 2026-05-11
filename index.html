@@ -201,6 +201,14 @@
       transition: 0.3s;
       border: 1px solid rgba(255, 255, 255, 0.05);
     }
+   .project-card{
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.project-card iframe{
+  max-width:100%;
+}
 
     .skill-card:hover,
     .project-card:hover,
@@ -258,10 +266,13 @@
         font-size: 45px;
       }
 
-      nav ul {
-        display: none;
-      }
-
+     
+    nav ul {
+  gap:15px;
+  font-size:14px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
       section {
         padding: 70px 7%;
       }
@@ -270,25 +281,71 @@
 
 /* YOUR EXISTING CSS */
 
-/* TABLEAU RESPONSIVE EMBED */
+/* TABLEAU WRAPPER */
 
-.tableau-container{
-  position:relative;
+.tableau-wrapper{
   width:100%;
-  padding-bottom:60%;
-  margin-bottom:20px;
   overflow:hidden;
-  border-radius:16px;
+  border-radius:18px;
+  margin-bottom:20px;
+  background:#0f172a;
+}
+    /* PROJECT IMAGE GALLERY */
+
+.project-gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:12px;
+  margin-bottom:20px;
 }
 
-.tableau-container iframe{
-  position:absolute;
-  top:0;
-  left:0;
+.project-gallery img{
   width:100%;
-  height:100%;
-  border:none;
-  border-radius:16px;
+  height:180px;
+  object-fit:cover;
+  border-radius:14px;
+  transition:0.4s;
+  cursor:pointer;
+}
+
+.project-gallery img:hover{
+  transform:scale(1.04);
+}
+    /* PROJECT IMAGE */
+
+.project-image{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:15px;
+  margin-bottom:20px;
+  transition:0.4s;
+}
+
+.project-card:hover .project-image{
+  transform:scale(1.03);
+}
+
+/* QUANTUM PROJECT GALLERY */
+
+.project-gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.project-gallery img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:14px;
+  transition:0.4s;
+  cursor:pointer;
+}
+
+.project-gallery img:hover{
+  transform:scale(1.04);
 }
   </style>
 
@@ -371,7 +428,7 @@
         </div>
 
         <div class="stat">
-          <h2>4+</h2>
+          <h2>4</h2>
           <p>Major Projects</p>
         </div>
 
@@ -455,23 +512,20 @@
   <div class="projects-grid">
 
     <!-- PROJECT 1 -->
+<div class="project-card">
+<div class="project-gallery">
 
-    <div class="project-card">
+  <img src="images/quantum-project1.png"
+       alt="Quantum Project Image 1">
 
-      <!-- REMOVE THIS IMAGE TAG IF IMAGE NOT AVAILABLE -->
+  <img src="images/quantum-project2.png"
+       alt="Quantum Project Image 2">
 
-      <img src="images/retinopathy-project.png"
-        alt="Diabetic Retinopathy Detection"
-        style="
-          width:100%;
-          border-radius:15px;
-          margin-bottom:20px;
-          object-fit:cover;
-        ">
-
+</div>
+    
       <h3>
 
-        <a href="https://github.com/hema8102"
+        <a href="https://github.com/hema8102/Hybrid-Quantum-Enhanced-Deep-Learning-for-Diabetic-Retinopathy-Detection"
           target="_blank"
           style="color:#38bdf8;">
 
@@ -482,16 +536,22 @@
 
       </h3>
 
-      <p>
-        Developed a hybrid Artificial Intelligence model using
-        Python, TensorFlow/Keras, CNN architectures,
-        and Quantum Machine Learning techniques
-        for retinal image classification and early detection assistance.
-      </p>
-
+     <p>
+        Designed and implemented a Hybrid Quantum-Enhanced Deep Learning
+        framework for Diabetic Retinopathy Detection using retinal fundus images.
+        The system combines Convolutional Neural Networks (CNNs),
+        TensorFlow/Keras, and Quantum Machine Learning concepts
+        to improve classification accuracy and feature extraction efficiency.
+        Performed image preprocessing, dataset balancing,
+        model training, evaluation, and visualization
+        for early-stage disease prediction assistance.
+</p>
+<p style="margin-top:15px;color:#38bdf8;">
+  Technologies: Python, TensorFlow, Keras, Qiskit
+</p>
       <br>
 
-      <a href="https://github.com/hema8102"
+      <a href="https://github.com/hema8102/Hybrid-Quantum-Enhanced-Deep-Learning-for-Diabetic-Retinopathy-Detection"
         target="_blank"
         class="btn primary">
 
@@ -501,26 +561,107 @@
 
     </div>
 
-    <!-- PROJECT 2 -->
-<!-- EV DASHBOARD PROJECT -->
+<!-- PROJECT 2 -->
 
 <div class="project-card">
 
-  <!-- RESPONSIVE TABLEAU EMBED -->
+  <!-- TABLEAU EMBED -->
 
-  <div class="tableau-container">
+  <div class="tableau-wrapper">
 
-    <iframe
-      src="https://public.tableau.com/views/ElectricVehicle_17710649020400/VisualizationToolForElectricVehicleChargeandRangeAnalysis?:showVizHome=no"
-      allowfullscreen>
-    </iframe>
+    <div class='tableauPlaceholder'
+      id='tableauViz'
+      style='position: relative'>
+
+      <noscript>
+
+        <a href='#'>
+
+          <img alt='EV Dashboard'
+            src='https://public.tableau.com/static/images/El/ElectricVehicle_17710649020400/VisualizationToolForElectricVehicleChargeandRangeAnalysis/1.png'
+            style='border:none;width:100%;border-radius:16px;' />
+
+        </a>
+
+      </noscript>
+
+      <object class='tableauViz' style='display:none;'>
+
+        <param name='host_url'
+          value='https%3A%2F%2Fpublic.tableau.com%2F' />
+
+        <param name='embed_code_version'
+          value='3' />
+
+        <param name='site_root'
+          value='' />
+
+        <param name='name'
+          value='ElectricVehicle_17710649020400/VisualizationToolForElectricVehicleChargeandRangeAnalysis' />
+
+        <param name='tabs'
+          value='yes' />
+
+        <param name='toolbar'
+          value='yes' />
+
+        <param name='animate_transition'
+          value='yes' />
+
+        <param name='display_static_image'
+          value='yes' />
+
+        <param name='display_spinner'
+          value='yes' />
+
+        <param name='display_overlay'
+          value='yes' />
+
+        <param name='display_count'
+          value='yes' />
+
+        <param name='language'
+          value='en-US' />
+
+      </object>
+
+    </div>
 
   </div>
+
+  <script type='text/javascript'>
+
+    var divElement =
+      document.getElementById('tableauViz');
+
+    var vizElement =
+      divElement.getElementsByTagName('object')[0];
+vizElement.style.width='100%';
+
+if(window.innerWidth < 768){
+  vizElement.style.height='600px';
+}else{
+  vizElement.style.height='850px';
+}
+ 
+    var scriptElement =
+      document.createElement('script');
+
+    scriptElement.src =
+      'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+    vizElement.parentNode.insertBefore(
+      scriptElement,
+      vizElement
+    );
+
+  </script>
 
   <h3>
 
     <a href="https://public.tableau.com/views/ElectricVehicle_17710649020400/VisualizationToolForElectricVehicleChargeandRangeAnalysis?:language=en-US&:display_count=n&:origin=viz_share_link"
       target="_blank"
+      rel="noopener noreferrer"
       style="color:#38bdf8;">
 
       EV Charge & Range Analytics Dashboard ↗
@@ -529,11 +670,81 @@
 
   </h3>
 
+    <p>
+      Developed an interactive Electric Vehicle Analytics Dashboard
+      using Tableau Public for visualizing EV charging performance,
+      battery efficiency, driving range analysis,
+      and energy consumption trends.
+      Implemented dynamic charts, filters,
+      KPI monitoring panels, and comparative analytics
+      to provide meaningful insights for electric vehicle performance evaluation.
+    </p>
+<p style="margin-top:15px;color:#38bdf8;">
+  Technologies: Python, TensorFlow, Keras, Qiskit
+</p>
+  <br>
+
+  <div style="
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+  ">
+
+    <a href="https://public.tableau.com/views/ElectricVehicle_17710649020400/VisualizationToolForElectricVehicleChargeandRangeAnalysis?:language=en-US&:display_count=n&:origin=viz_share_link"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn primary">
+
+      Live Dashboard
+
+    </a>
+
+    <a href="https://public.tableau.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn secondary">
+
+      Tableau Public
+
+    </a>
+
+  </div>
+
+</div>
+
+   <!-- PROJECT 3 -->
+
+<div class="project-card">
+
+  <img src="images/expense-tracker.png"
+    alt="Family Expense Tracker"
+    class="project-image">
+
+  <h3>
+
+    <a href="https://github.com/hema8102/calculating-family-expenses"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="color:#38bdf8;">
+
+      Family Income & Expense Tracker ↗
+
+    </a>
+
+  </h3>
+
   <p>
-    Interactive Tableau dashboard for electric vehicle
-    charge behavior, energy efficiency,
-    and range analytics using advanced data visualization.
+    Built a ServiceNow-based Family Income & Expense Tracker
+    application for monitoring personal financial activities,
+    expense categorization, income management,
+    and automated workflow processing.
+    Integrated custom forms, reporting modules,
+    dashboard visualization, and approval workflows
+    to simplify financial tracking and budget management operations.
   </p>
+  <p style="margin-top:15px;color:#38bdf8;">
+  Technologies: Python, TensorFlow, Keras, Qiskit
+</p>
 
   <br>
 
@@ -543,78 +754,95 @@
       flex-wrap:wrap;
   ">
 
-    <!-- LIVE DASHBOARD -->
+    <!-- SOURCE CODE -->
 
-    <a href="https://public.tableau.com/views/ElectricVehicle_17710649020400/VisualizationToolForElectricVehicleChargeandRangeAnalysis?:language=en-US&:display_count=n&:origin=viz_share_link"
+    <a href="https://github.com/hema8102/calculating-family-expenses"
       target="_blank"
+      rel="noopener noreferrer"
       class="btn primary">
 
-      Live Dashboard
+      Source Code
 
     </a>
 
-    <!-- GITHUB -->
+    <!-- VIDEO DEMO -->
 
-    <a href="https://github.com/hema8102"
+   <a href="https://drive.google.com/file/d/1AXpXyhMRVKNAQRC710y0-QJkt23Gw4D_/view?usp=drivesdk"
       target="_blank"
+      rel="noopener noreferrer"
       class="btn secondary">
 
-      Source Code
+      Live Demo
 
     </a>
 
   </div>
 
 </div>
-    
-    <!-- PROJECT 3 -->
+<!-- PROJECT 4 -->
 
-    <div class="project-card">
+<div class="project-card">
 
-      <img src="images/expense-tracker.png"
-        alt="Expense Tracker"
-        style="
-          width:100%;
-          border-radius:15px;
-          margin-bottom:20px;
-          object-fit:cover;
-        ">
+  <img src="images/asset-management-portal.png"
+    alt="Asset Management Portal"
+    class="project-image">
 
-      <h3>
+  <h3>
 
-        <a href="https://github.com/hema8102"
-          target="_blank"
-          style="color:#38bdf8;">
+    <a href="https://github.com/hema8102/Asset-Management-Portal"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="color:#38bdf8;">
 
-          Family Income & Expense Tracker ↗
+      Asset Management Portal ↗
 
-        </a>
+    </a>
 
-      </h3>
+  </h3>
 
-      <p>
-        Built a custom ServiceNow application
-        for tracking family income and expenses
-        with workflows, automation,
-        custom forms, and reporting functionality.
-      </p>
+     <p>
+      Developed a centralized Asset Management Portal
+      using the ServiceNow platform for managing organizational assets,
+      inventory records, and IT service lifecycle operations.
+      Implemented workflow automation, asset allocation tracking,
+      request handling, reporting dashboards,
+      and inventory monitoring features
+      to improve operational efficiency and asset utilization management.
+    </p>
+<p style="margin-top:15px;color:#38bdf8;">
+  Technologies: Python, TensorFlow, Keras, Qiskit
+</p>
+  <br>
 
-      <br>
+  <div style="
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+  ">
 
-      <a href="https://github.com/hema8102"
-        target="_blank"
-        class="btn primary">
+    <a href="https://github.com/hema8102/Asset-Management-Portal"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn primary">
 
-        Source Code
+      Source Code
 
-      </a>
+    </a>
 
-    </div>
+    <a href="https://drive.google.com/file/d/1FksFs_sc-kQuV4YpzyWeuTyZRNqr1AXB/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn secondary">
+
+      Live Demo
+
+    </a>
 
   </div>
 
+</div>
+    </div>
 </section>
- 
 <!-- CERTIFICATIONS -->
 
 <section id="certifications">
